@@ -6,7 +6,6 @@ from colorama import Fore, Style
 os.system("clear" if os.name == "posix" else "cls")
 colorama.init(autoreset=True)
 
-# Define logo components with enhanced ASCII art
 logo_color = Fore.LIGHTGREEN_EX
 logo_reset = Style.RESET_ALL
 logo_body = [
@@ -15,7 +14,6 @@ logo_body = [
 
  ]
 
-# Build the centered logo
 logo = logo_color
 for line in logo_body:
     stripped_length = len(line)
@@ -28,7 +26,6 @@ for line in logo_body:
     logo += centered_line + '\n'
 logo += logo_reset
 
-# Developer information
 developer_info = f"""{Fore.YELLOW}
   Developer  : Tausif Zaman
   Instagram  : @_tausif_zaman
@@ -36,13 +33,11 @@ developer_info = f"""{Fore.YELLOW}
 {Style.RESET_ALL}
 """
 
-# Print elements
 print("\n")
 print(logo)
 print("\n\n")
 print(developer_info)
 
-# User interaction
 text = input(f"{Fore.CYAN}Enter text: {Style.RESET_ALL}")
 md5_hash = hashlib.md5(text.encode()).hexdigest()
 print(f"{Fore.GREEN}MD5 Hash: {md5_hash}{Style.RESET_ALL}")
